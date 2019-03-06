@@ -5,14 +5,16 @@
     "main": "index.js",
     "scripts": {
         "test": "jasmine-ts",
-        "cucumber": "cucumber-js"
+        "cucumber": "tsc features/**/*.ts && cucumber-js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/chai": "^4.1.7",
         "@types/cucumber": "^4.0.5",
         "@types/jasmine": "^3.3.9",
+        "chai": "^4.2.0",
         "cucumber": "^5.1.0",
         "jasmine": "^3.3.1",
         "jasmine-spec-reporter": "^4.2.1",

@@ -1,18 +1,16 @@
-const assert = require('assert');
-const { Given, When, Then } = require('cucumber');
-
+"use strict";
+exports.__esModule = true;
+var cucumber_1 = require("cucumber");
+var chai_1 = require("chai");
 function isItFriday(today) {
     return 'Nope';
 }
-
-Given('today is Sunday', function() {
+cucumber_1.Given('today is Sunday', function () {
     this.today = 'Sunday';
 });
-
-When("I ask whether it's Friday yet", function() {
+cucumber_1.When("I ask whether it's Friday yet", function () {
     this.actualAnswer = isItFriday(this.today);
 });
-
-Then('I should be told {string}', function(expectedAnswer) {
-    assert.equal(this.actualAnswer, expectedAnswer);
+cucumber_1.Then('I should be told {string}', function (expectedAnswer) {
+    chai_1.expect(this.actualAnswer).to.equal(expectedAnswer);
 });
