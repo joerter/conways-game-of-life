@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jasmine-ts",
-        "cucumber": "tsc features/**/*.ts && cucumber-js"
+        "cucumber": "tsc features/step_definitions/stepdefs.ts && cucumber-js"
     },
     "keywords": [],
     "author": "",
