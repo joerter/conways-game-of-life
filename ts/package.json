@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "jasmine-ts",
+        "test": "tsc game-of-life/world.ts && jasmine-ts",
         "cucumber": "tsc features/step_definitions/stepdefs.ts && cucumber-js"
     },
     "keywords": [],
