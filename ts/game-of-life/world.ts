@@ -1,16 +1,19 @@
 export class World {
     worldGrid: string[][] = [];
 
-    initialize(docString: string) {
+    initialize(asciiWorld: string) {
         this.worldGrid = [];
 
-        const linesArray = docString.split("\n");
+        const lines = asciiWorld.split("\n");
 
-        for (let i = 0; i < linesArray.length; i++) {
-            // TODO: need to change from array.from since not supported
-            this.worldGrid.push(Array.from(linesArray[i]));
+        for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+            const line = lines[lineIndex];
+            this.worldGrid.push([]);
+
+            for (let cellIndex = 0; cellIndex < line.length; cellIndex++) {
+                const cell = line[cellIndex];
+                this.worldGrid[lineIndex].push(cell);
+            }
         }
     }
-
-    testMethod(docString: string) {}
 }

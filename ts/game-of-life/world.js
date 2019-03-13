@@ -4,14 +4,18 @@ var World = /** @class */ (function () {
     function World() {
         this.worldGrid = [];
     }
-    World.prototype.initialize = function (docString) {
+    World.prototype.initialize = function (asciiWorld) {
         this.worldGrid = [];
-        var linesArray = docString.split("\n");
-        for (var i = 0; i < linesArray.length; i++) {
-            this.worldGrid.push(Array.from(linesArray[i]));
+        var lines = asciiWorld.split("\n");
+        for (var lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+            var line = lines[lineIndex];
+            this.worldGrid.push([]);
+            for (var cellIndex = 0; cellIndex < line.length; cellIndex++) {
+                var cell = line[cellIndex];
+                this.worldGrid[lineIndex].push(cell);
+            }
         }
     };
-    World.prototype.testMethod = function (docString) { };
     return World;
 }());
 exports.World = World;
