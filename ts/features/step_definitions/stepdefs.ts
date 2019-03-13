@@ -1,14 +1,9 @@
 import { Given, When, Then } from "cucumber";
 import { expect } from "chai";
-import { World } from "../../game-of-life/world";
+import { asciiToGrid } from "../../game-of-life/ascii-to-grid";
 
-Given("I have supplied the following {string}", function(
-    generation,
-    docString
-) {
-    console.log(docString);
-    const world = new World();
-    world.initialize(docString);
+Given("I have supplied the following {string}", function(generation, docString) {
+    asciiToGrid(docString);
 });
 
 When("I tell the world to evolve once", function() {
