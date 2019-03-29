@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "tsc spec/ascii-to-grid.spec.ts && jasmine",
-        "cucumber": "tsc features/step_definitions/stepdefs.ts && cucumber-js"
+        "test": "tsc && jasmine",
+        "cucumber": "tsc && cucumber-js"
     },
     "keywords": [],
     "author": "",

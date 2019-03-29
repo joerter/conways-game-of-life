@@ -1,7 +1,7 @@
 import { asciiToGrid } from "../game-of-life/ascii-to-grid";
 
 describe("asciiToGrid", () => {
-    it("should parse the ascii world into a Grid", () => {
+    it("should parse the ascii world into a grid", () => {
         const line1 = "---\n";
         const line2 = "---\n";
         const line3 = "---";

@@ -1,7 +1,7 @@
-export function asciiToGrid(asciiWorld: string) {
+export function asciiToGrid(ascii: string) {
     const worldGrid: string[][] = [];
 
-    const lines = asciiWorld.split("\n");
+    const lines = ascii.split("\n");
 
     for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
         const line = lines[lineIndex];
