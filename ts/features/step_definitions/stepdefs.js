@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var cucumber_1 = require("cucumber");
+var chai_1 = require("chai");
 var ascii_to_grid_1 = require("../../game-of-life/ascii-to-grid");
 var evolve_grid_1 = require("../../game-of-life/evolve-grid");
 var grid;
@@ -12,5 +13,5 @@ cucumber_1.When("I tell the world to evolve once", function () {
     evolvedGrid = evolve_grid_1.evolveGrid(grid);
 });
 cucumber_1.Then("the next {string} should be", function (generation, docString) {
-    return "pending";
+    chai_1.expect(evolve_grid_1.evolveGrid).equal(docString);
 });

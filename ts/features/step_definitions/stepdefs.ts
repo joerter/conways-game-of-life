@@ -16,5 +16,5 @@ When("I tell the world to evolve once", function() {
 });
 
 Then("the next {string} should be", function(generation, docString) {
-    return "pending";
+    expect(evolveGrid).equal(docString);
 });
