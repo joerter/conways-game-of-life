@@ -1,9 +1,9 @@
-import { Grid } from "./grid";
+import { Grid } from './grid';
 
 export function asciiToGrid(asciiWorld: string) {
     const worldGrid: Grid = [];
 
-    const lines = asciiWorld.split("\n");
+    const lines = asciiWorld.split('\n');
 
     for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
         const line = lines[lineIndex];
