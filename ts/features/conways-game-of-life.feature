@@ -41,7 +41,7 @@ Feature: Conway's Game of Life
         When I tell the world to evolve once
         Then the next "generation" should be
             """
-            --*
+            -**
             -**
             ---
             """
